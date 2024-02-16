@@ -1,0 +1,60 @@
+>> clean
+error: 'clean' undefined near line 1, column 1
+>> clear
+>> diary on
+>> 2-2
+ans = 0
+>> clear ('ans');
+>> diary on
+>> tic
+>> s = 0;
+>> for n = 1:100000
+s=s+1/n^2;
+end
+>> toc
+Elapsed time is 39.7922 seconds.
+>> 
+>> 
+>> tic
+>> >> s = 0;
+error: parse error:
+
+  syntax error
+
+>>> >> s = 0;
+    ^
+>> >> for n = 1:100000
+error: parse error:
+
+  syntax error
+
+>>> >> for n = 1:100000
+    ^
+>> s=s+1/n^2;
+>> end
+error: parse error:
+
+  syntax error
+
+>>> end
+      ^
+>> >> toc
+error: parse error:
+
+  syntax error
+
+>>> >> toc
+    ^
+>> clear
+>> clean
+error: 'clean' undefined near line 1, column 1
+>> tic
+>> n = 1:100000;
+>> s = sum(1./n.^2);
+>> toc
+Elapsed time is 23.6683 seconds.
+>> toc
+Elapsed time is 58.3919 seconds.
+>> toc
+Elapsed time is 60.6191 seconds.
+>> diary off
